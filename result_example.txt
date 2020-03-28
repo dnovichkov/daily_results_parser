@@ -1,0 +1,35 @@
+27.03
+
+SomeProjectName Activiry 1ч
+SomeProjectName Other activity 4ч
+OtherProjectName 3ч
+
+26.03
+
+SomeProjectName Some work 2ч
+SomeProjectName New work 6ч
+
+25.03
+
+SomeProjectName Some work #2 8ч
+
+24.03
+
+SomeProjectName Some work #2 8ч
+
+23.03
+
+SomeProjectName Some work #2 8ч
+
+
+19.03
+
+ThirdProjectName Обсуждение валидации данных 1ч
+OtherProjectName разработка письма 2ч
+SomeProjectName Bugfix 2ч
+OtherProjectName работы по проекту 3ч
+
+18.03
+
+ThirdProjectName Activiry 1ч
+SomeProjectName Activiry 0,5ч
