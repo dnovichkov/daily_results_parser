@@ -14,7 +14,8 @@ def save_json(json_result, filename_prefix: str):
             f.write(chunk)
 
 
-def save_results_to_excel(results, filename):
+def save_results_to_excel(results, filename_prefix: str):
+    filename = filename_prefix + "_" + datetime.datetime.now().strftime("%Y-%m-%d %H-%M-%S") + "_.xlsx"
     workbook = xlsxwriter.Workbook(filename)
     worksheet = workbook.add_worksheet()
     bold = workbook.add_format({'bold': True})
@@ -78,7 +79,7 @@ def get_daily_results(text_filename: str):
                     project_results[project][activity] += duration
 
     save_json(project_results, 'project_results')
-    save_results_to_excel(project_results, 'project_results.xlsx')
+    save_results_to_excel(project_results, 'project_results')
 
 
 if __name__ == "__main__":
