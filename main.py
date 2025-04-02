@@ -1,6 +1,5 @@
 import json
 import datetime
-import os
 import xlsxwriter
 
 
@@ -44,7 +43,7 @@ def save_results_to_excel(results, filename_prefix: str):
     workbook.close()
 
 
-def get_daily_results(text_filename: str):
+def get_daily_results(text_filename: str, month_string: str):
     lines = []
     day_records = {}
     project_results = {}
@@ -53,7 +52,7 @@ def get_daily_results(text_filename: str):
         for line in fp:
             line = line.replace('\n', '')
             lines.append(line)
-            if '.03' in line:
+            if month_string in line:
                 dateline = line
 
                 day_records[dateline] = []
@@ -83,4 +82,4 @@ def get_daily_results(text_filename: str):
 
 
 if __name__ == "__main__":
-    get_daily_results('result_example.txt')
+    get_daily_results('result_example.txt', ' марта')
